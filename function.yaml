@@ -1,0 +1,16 @@
+apiVersion: "nuclio.io/v1"
+kind: "Function"
+spec:
+ build:
+   commands:
+   - "apk --no-cache add curl tar bash ca-certificates"
+   - "curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+   - "chmod +x kubectl"
+   - "mv kubectl /usr/local/bin/kubectl"
+   - "curl -O https://kubernetes-helm.storage.googleapis.com/helm-v2.7.2-linux-amd64.tar.gz"
+   - "tar xzvf helm-v2.7.2-linux-amd64.tar.gz"
+   - "chmod +x linux-amd64/helm"
+   - "mv linux-amd64/helm /usr/local/bin/helm"
+   - "helm init --client-only"
+   - "helm repo add v3io-stable https://v3io.github.io/helm-charts/stable"
+   - "helm repo add nuclio https://nuclio.github.io/nuclio/charts"
