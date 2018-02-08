@@ -1,6 +1,6 @@
 # GitOps
 
-The process is aimed to provide a simple function for updating Kubernetes cluster state using [helm](https://github.com/kubernetes/helm) as deployment manager.
+The process is aimed to provide a simple [nuclio](https://github.com/nuclio/nuclio) function for updating Kubernetes cluster state using [helm](https://github.com/kubernetes/helm) as deployment manager.
 
 **Basic Flow**
 
