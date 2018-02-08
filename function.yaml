@@ -12,5 +12,4 @@ spec:
    - "chmod +x linux-amd64/helm"
    - "mv linux-amd64/helm /usr/local/bin/helm"
    - "helm init --client-only"
-   - "helm repo add v3io-stable https://v3io.github.io/helm-charts/stable"
    - "helm repo add nuclio https://nuclio.github.io/nuclio/charts"
